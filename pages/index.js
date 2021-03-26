@@ -1,25 +1,12 @@
-import { useState } from 'react';
+import Link from 'next/link';
 
 function Home() {
     return (
         <div>
-            <h1>Hello World</h1>
-            <Counter />
-        </div>
-    )
-}
-
-function Counter() {
-    const [counter, setCount] = useState(1);
-
-    function addCount() {
-        setCount(counter +1);
-    }
-
-    return (
-        <div>
-            <div>{counter}</div>
-            <button onClick={addCount}>Add</button>
+            <h1>Home</h1>
+            <Link href="/sobre/">
+                <a>Quem Somos</a>
+            </Link>
         </div>
     )
 }
